@@ -1,0 +1,7 @@
+{
+    "env" : {
+       "MONGO_USER": "lester",
+       "MONGO_PASSWORD": "0NKVxqsas2I03vok",
+       "MONGO_URL": "mongodb+srv://lester:0NKVxqsas2I03vok@cluster0.5ewcuzr.mongodb.net/booking-DB?retryWrites=true&w=majority"
+    }
+}
