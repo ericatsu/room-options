@@ -1,6 +1,9 @@
+import React, { Component } from 'react';
 
-const BookingsPage = () => {
+class BookingsPage extends Component {
+  render() {
     return <h1>The Bookings Page</h1>;
-  };
-  
-  export default BookingsPage;
+  }
+}
+
+export default BookingsPage;

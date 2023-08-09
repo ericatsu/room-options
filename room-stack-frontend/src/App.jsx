@@ -1,20 +1,22 @@
-import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AuthPage from './pages/Auth';
 import BookingsPage from './pages/Bookings';
 import EventsPage from './pages/Events';
+import { Navigate } from 'react-router-dom';
 
 import './App.css';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Redirect from="/" to="/auth" exact />
-        <Route path="/auth" component={AuthPage} />
-        <Route path="/events" component={EventsPage} />
-        <Route path="/bookings" component={BookingsPage} />
-      </Switch>
-    </BrowserRouter>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Navigate to="/auth" />} />
+        <Route path="/auth" element={<AuthPage />} />
+        <Route path="/events" element={<EventsPage />} />
+        <Route path="/bookings" element={<BookingsPage />} />
+      </Routes>
+    </Router>
   );
 };
 
